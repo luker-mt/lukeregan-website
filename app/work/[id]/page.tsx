@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Heading, Text, Button } from "@/components/ui";
 
-export default function WorkDetailPage({
+export default async function WorkDetailPage({
   params,
 }: {
   params: Promise<{ id: string }>;
