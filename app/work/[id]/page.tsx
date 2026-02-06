@@ -2,12 +2,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Heading, Text, Button } from "@/components/ui";
 
-export default async function WorkDetailPage({
+export default function WorkDetailPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }) {
-  const { id } = await params;
+  const { id } = params;
   const num = Number(id);
   if (Number.isNaN(num) || num < 1) notFound();
 
