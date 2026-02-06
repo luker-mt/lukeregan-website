@@ -1,0 +1,101 @@
+/**
+ * Design tokens — lukeregan.com
+ * Inspired by Smiling Wolf: editorial, minimal, confident typography and spacing.
+ * Use these CSS custom properties in components and Tailwind theme.
+ */
+
+:root {
+  /* ——— Color ——— */
+  --color-ink: #0a0a0a;
+  --color-ink-muted: #404040;
+  --color-ink-subtle: #737373;
+  --color-paper: #fafafa;
+  --color-paper-elevated: #ffffff;
+  --color-border: #e5e5e5;
+  --color-border-strong: #a3a3a3;
+  --color-accent: #0a0a0a;
+  --color-accent-hover: #404040;
+  --color-focus: #0a0a0a;
+
+  /* ——— Typography (--font-display, --font-body, --font-mono set by next/font on <html>) ——— */
+
+  --text-hero: clamp(2.5rem, 5vw + 2rem, 4.5rem);
+  --text-h1: clamp(2rem, 4vw + 1.5rem, 3.5rem);
+  --text-h2: clamp(1.5rem, 3vw + 1rem, 2.5rem);
+  --text-h3: clamp(1.25rem, 2vw + 0.75rem, 1.75rem);
+  --text-h4: 1.25rem;
+  --text-body: 1rem;
+  --text-body-lg: 1.125rem;
+  --text-small: 0.875rem;
+  --text-caption: 0.75rem;
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+  --leading-loose: 1.85;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.08em;
+
+  /* ——— Spacing (8px base) ——— */
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+  --space-32: 8rem;     /* 128px */
+  --space-40: 10rem;    /* 160px */
+
+  /* Section spacing (Smiling Wolf-style generous rhythm) */
+  --section-gap: clamp(4rem, 10vw, 8rem);
+  --block-gap: clamp(2rem, 5vw, 4rem);
+
+  /* ——— Layout ——— */
+  --container-narrow: 45rem;
+  --container-default: 65rem;
+  --container-wide: 85rem;
+  --gutter: clamp(1.5rem, 5vw, 2.5rem);
+  --nav-height: 4.5rem;
+
+  /* ——— Motion ——— */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 280ms;
+  --duration-slow: 400ms;
+
+  /* ——— Radius & shadow ——— */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark mode (optional, for future) */
+@media (prefers-color-scheme: dark) {
+  :root.auto-dark {
+    --color-ink: #fafafa;
+    --color-ink-muted: #a3a3a3;
+    --color-ink-subtle: #737373;
+    --color-paper: #0a0a0a;
+    --color-paper-elevated: #171717;
+    --color-border: #262626;
+    --color-border-strong: #525252;
+    --color-accent: #fafafa;
+    --color-accent-hover: #e5e5e5;
+    --color-focus: #fafafa;
+  }
+}
